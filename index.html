@@ -12,7 +12,6 @@
     crossorigin="anonymous" referrerpolicy="no-referrer">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/x-icon" href="https://boolean.careers/favicon/favicon.ico">
-  <link rel="stylesheet" href="css/style.css">
   <title>email list</title>
 </head>
 
@@ -21,9 +20,9 @@
   <div id="app">
 
     <div class="container mt-5">
-      <div class="row">
-        <ul class="list-group">
-          <li class="list-group-item"></li>
+      <div class="row w-50 m-auto">
+        <ul class="list-group text-center" v-if="mailList.length === 10">
+          <li class="list-group-item" v-for="mail in mailList">{{mail}}</li>
         </ul>
       </div>
     </div>
